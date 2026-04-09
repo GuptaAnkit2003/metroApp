@@ -71,7 +71,7 @@ com.metroApp.metroTicket
 ### 1️⃣ Clone the repository
 
 ```
-git clone <[your-repo-link](https://github.com/GuptaAnkit2003/metroApp/tree/main)>
+git clone <[your-repo-link](https://github.com/GuptaAnkit2003/metroApp)>
 cd metro-ticket
 ```
 

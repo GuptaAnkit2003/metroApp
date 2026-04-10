@@ -1,172 +1,70 @@
-# 🚇 Metro Ticket Backend System
+# Getting Started with Create React App
 
-## 📌 Project Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project is a **backend system for a metro ticketing application** built using Spring Boot. 
-It allows users to book tickets, validate entry and exit, and ensures proper usage through expiry and validation logic.
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## 🚀 Features
+### `npm start`
 
-* 🎫 Book Metro Ticket
-* 🔍 Get Ticket Details by ID
-* 🚉 Entry Validation (only once)
-* 🚪 Exit Validation (only after entry)
-* ⏱️ Ticket Expiry (valid for 18 hours)
-* ❌ Prevent misuse (duplicate entry/exit not allowed)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## 🏗️ Architecture
+### `npm test`
 
-The project follows a **layered architecture**:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```
-Controller → Service → Repository → Database
-```
+### `npm run build`
 
-* **Controller** → Handles API requests
-* **Service** → Contains business logic
-* **Repository** → Handles database operations
-* **Database** → Stores ticket data
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## 🛠️ Tech Stack
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* Java 17+
-* Spring Boot
-* Spring Data JPA
-* PostgreSQL
-* Hibernate
-* Postman (for API testing)
+### `npm run eject`
 
----
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## 📂 Project Structure
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```
-com.metroApp.metroTicket
-│
-├── controller
-│   └── TicketController.java
-│
-├── service
-│   └── TicketService.java
-│
-├── repository
-│   └── TicketRepository.java
-│
-├── model
-│   └── Ticket.java
-│
-└── MetroTicketApplication.java
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
----
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## ⚙️ Setup Instructions
+## Learn More
 
-### 1️⃣ Clone the repository
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```
-git clone <[your-repo-link](https://github.com/GuptaAnkit2003/metroApp)>
-cd metro-ticket
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### 2️⃣ Configure Database (PostgreSQL)
+### Code Splitting
 
-Update `application.properties`:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-```
-spring.datasource.url=jdbc:postgresql://localhost:5432/metrodb
-spring.datasource.username=postgres
-spring.datasource.password=your_password
+### Analyzing the Bundle Size
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
----
+### Making a Progressive Web App
 
-### 3️⃣ Run the Application
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Run the main class:
+### Advanced Configuration
 
-```
-MetroTicketApplication.java
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Server will start at:
+### Deployment
 
-```
-http://localhost:8080
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
----
+### `npm run build` fails to minify
 
-## 📡 API Endpoints
-
-### 🎫 Book Ticket
-
-* **POST** `/ticket/book?source=Delhi&destination=Noida`
-
----
-
-### 🔍 Get Ticket
-
-* **GET** `/ticket/{id}`
-
----
-
-### 🚉 Entry
-
-* **POST** `/ticket/entry/{id}`
-
----
-
-### 🚪 Exit
-
-* **POST** `/ticket/exit/{id}`
-
----
-
-## 🧪 Testing
-
-All APIs were tested using Postman.
-
-### Flow:
-
-1. Book Ticket
-2. Use ID for Entry
-3. Use same ID for Exit
-
----
-
-## ⚠️ Validations Implemented
-
-* Entry allowed only once
-* Exit allowed only after entry
-* Ticket expires after 18 hours
-* Invalid ticket ID handled
-* Duplicate usage prevented
-
----
-
-## 🎯 Conclusion
-
-This project demonstrates:
-
-* Backend development using Spring Boot
-* REST API design
-* Database integration
-* Business logic implementation
-
----
-
-## 👨‍💻 Author
-
-**Ankit Gupta**
-
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
